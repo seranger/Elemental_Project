@@ -1,0 +1,134 @@
+.off-screen-menu {
+    background: #051b2b;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    transition: right 0.4s ease-in-out;
+    z-index: 97;
+  }
+  
+
+.off-screen-menu.active {
+    right: 0;
+}
+
+.navbar {
+    padding: 1rem;
+    background-color: #ffffff;
+  }
+  
+  .navdiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+
+  .hamburger-menu {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+    margin-left: auto;
+    position: relative;
+    z-index: 100 !important;
+  }
+  
+  .hamburger-menu span {
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+  
+
+.hamburger-menu span:nth-child(1) {
+    top: 25%;
+}
+
+.hamburger-menu span:nth-child(2) {
+    top: 75%;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  .hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-menu.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  .carousel {
+    position: relative;
+  }
+
+  .carousel__item {
+    height: 300px;
+    background: grey;
+    padding: 1em;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    color: #ffffff;
+    display: none;
+    z-index: 99 !important;
+  }
+
+  .carousel__item--selected{
+    display: block;
+    z-index: 98 !important;
+  }
+
+  .carousel__nav{
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  }
+
+  .carousel__button{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    margin: 0  100px ;
+    cursor: pointer;
+  }
+
+.carousel__button--selected{
+    background: rgba(255, 255, 255, 0.5);
+}
+
+  li {
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font: 14px 'Open Sans', sans-serif;
+    padding: 0px 0px 0px 20px;
+  }
+  
+  a {
+    color: #ffffff;
+    font: 16px 'Open Sans', sans-serif, bold;
+    text-decoration:solid;
+    padding: 0px 0px 10px;
+  }
+  
